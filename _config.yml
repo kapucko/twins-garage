@@ -1,6 +1,6 @@
 title: Twins garage
-url: ""        # napr. https://www.twinsgarage.sk
-baseurl: ""    # ak web beží v podpriečinku, napr. /autoservis
+url: "https://kapucko.github.io"   # neskôr vlastná doména, napr. https://www.twinsgarage.sk
+baseurl: "/twins-garage"      # pri vlastnej doméne nastav na ""
 
 # Údaje firmy – spoločné pre všetky jazyky
 company:
