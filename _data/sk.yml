@@ -18,7 +18,6 @@ other_lang: { code: en, label: EN, url: /en/, footer: English version }
 
 hero:
   title: Vaše auto v dobrých rukách
-  lead: Poctivo, rýchlo a bez zbytočných rečí
   text: Sme autoservis v Ivanke pri Dunaji, kúsok od Bratislavy. Postaráme sa o pravidelný servis, opravy aj prezutie pneumatík – vopred vám povieme, čo treba urobiť a koľko to bude stáť.
   cta_primary: Dohodnúť termín
   cta_secondary: Naše služby

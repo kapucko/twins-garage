@@ -17,7 +17,6 @@ other_lang: { code: sk, label: SK, url: /, footer: Slovenská verzia }
 
 hero:
   title: Your car in good hands
-  lead: Honest, quick and straightforward
   text: We're a car service in Ivanka pri Dunaji, just outside Bratislava. We handle routine maintenance, repairs and tyre changes – and we tell you up front what needs doing and what it will cost.
   cta_primary: Book an appointment
   cta_secondary: Our services
