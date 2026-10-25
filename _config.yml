@@ -15,7 +15,9 @@ company:
   phone_link: "+421900000000"   # TODO rovnaké číslo bez medzier
   email: info@example.sk         # TODO doplniť
   since: 2023
-  map_query: Bernolákovská 63, 900 28 Ivanka pri Dunaji
+  # Presný bod na mape (z odkazu Google Maps)
+  map_coords: "48.1919532,17.2670554"
+  map_link: https://maps.app.goo.gl/KHLSTCRcGMitN3Gs9
 
 defaults:
   - scope: { path: "" }
