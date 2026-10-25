@@ -1,0 +1,102 @@
+# Slovenské texty. Štruktúra musí byť rovnaká ako v en.yml.
+meta:
+  title: Twins garage – autoservis Ivanka pri Dunaji
+  description: Twins garage – autoservis a pneuservis v Ivanke pri Dunaji. Servisné prehliadky, opravy, diagnostika, klimatizácia a príprava na STK.
+  logo_small: Autoservis
+  menu_label: Hlavné menu
+  home_label: Twins garage – úvod
+
+# id = kotva sekcie v URL
+nav:
+  home: { id: uvod, label: Úvod }
+  about: { id: o-nas, label: O nás }
+  services: { id: sluzby, label: Služby }
+  contact: { id: kontakt, label: Kontakt }
+
+call_btn: Zavolajte nám
+other_lang: { code: en, label: EN, url: /en/, footer: English version }
+
+hero:
+  title: Vaše auto v dobrých rukách
+  lead: Poctivo, rýchlo a bez zbytočných rečí
+  text: Sme autoservis v Ivanke pri Dunaji, kúsok od Bratislavy. Postaráme sa o pravidelný servis, opravy aj prezutie pneumatík – vopred vám povieme, čo treba urobiť a koľko to bude stáť.
+  cta_primary: Dohodnúť termín
+  cta_secondary: Naše služby
+  image_alt: Naša dielňa
+
+features_label: Prečo my
+features:
+  - icon: star
+    title: Kvalitná práca
+    text: Používame overené diely a náplne a za svojou prácou si stojíme.
+  - icon: clock
+    title: Krátke termíny
+    text: Bežný servis a menšie opravy zvládneme spravidla ešte v ten istý deň.
+  - icon: list
+    title: Všetko na jednom mieste
+    text: Servis, pneuservis aj príprava na STK – nemusíte behať po meste.
+  - icon: gift
+    title: Férová cena
+    text: Cenu vám povieme vopred. Žiadne prekvapenia pri preberaní auta.
+
+services:
+  eyebrow: Služby
+  title: S čím vám pomôžeme
+  text: Staráme sa o osobné autá a dodávky všetkých značiek. Ak tu niečo nevidíte, zavolajte – radi poradíme.
+  items:
+    - title: Autoservis
+      text: Pravidelné servisné prehliadky podľa predpisu výrobcu a opravy mechaniky.
+      list: [výmena oleja a filtrov, "rozvody, spojka, výfuk", servisná knižka]
+    - title: Pneuservis
+      text: Sezónne prezutie, vyváženie kolies a oprava defektu na počkanie.
+      list: [prezutie a vyváženie, oprava defektu, predaj pneumatík na objednávku]
+    - title: Diagnostika
+      text: Svieti vám kontrolka? Pripojíme diagnostiku, nájdeme príčinu a vysvetlíme, čo s tým.
+      list: [počítačová diagnostika, elektroinštalácia]
+    - title: Brzdy a podvozok
+      text: Kontrola a výmena brzdových platničiek, kotúčov, tlmičov a čapov.
+      list: [brzdy a brzdová kvapalina, "tlmiče, ramená, ložiská"]
+    - title: Klimatizácia
+      text: Plnenie a dezinfekcia klimatizácie, aby ste v lete nemuseli jazdiť s otvoreným oknom.
+      list: [plnenie a kontrola tesnosti, čistenie a dezinfekcia]
+    - title: Príprava na STK a EK
+      text: Auto pred technickou a emisnou kontrolou skontrolujeme a opravíme, čo treba.
+      list: [predkontrola pred STK, odstránenie závad]
+
+about:
+  eyebrow: O nás
+  title: Malý servis s osobným prístupom
+  paragraphs:
+    - Twins garage funguje od roku 2023 v Ivanke pri Dunaji, kúsok od Bratislavy. Každé auto riešime tak, akoby bolo naše – čo nie je nutné, nemeníme, a čo meníme, vám ukážeme.
+    - Nezáleží na tom, či máte nové auto v záruke alebo starší rodinný voz. Prídite sa poradiť.
+  stats:
+    - { value: "2023", label: otvorili sme dielňu }
+    - { value: Všetky, label: značky osobných áut a dodávok }
+    - { value: 1 deň, label: na väčšinu bežných opráv }
+    - { value: 15 min, label: autom z Bratislavy }
+
+map:
+  label: Mapa
+  title: Twins garage na mape
+  heading: Bernolákovská 63, Ivanka pri Dunaji
+  button: Zobraziť mapu
+  note: Mapa sa načíta zo služby Google Maps, ktorá môže ukladať cookies.
+  open: Otvoriť v Google Maps
+  hl: sk
+
+contact:
+  eyebrow: Kontakt
+  title: Ozvite sa nám
+  text: Termín si dohodnete najrýchlejšie telefonicky.
+  address_h: Adresa a kontakt
+  country: ""
+  phone: Tel.
+  email: E-mail
+  hours_h: Otváracie hodiny
+  hours:
+    - { days: Po – Pi, time: 8:00 – 17:00 }
+    - { days: So – Ne, time: zatvorené }
+  company_h: Fakturačné údaje
+  ico: IČO
+  dic: DIČ
+  icdph: IČ DPH

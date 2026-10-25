@@ -1,0 +1,184 @@
+{%- assign t = site.data[page.lang] -%}
+{%- assign c = site.company -%}
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ t.meta.title }}</title>
+  <meta name="description" content="{{ t.meta.description }}">
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ t.other_lang.code }}" href="{{ t.other_lang.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="#{{ t.nav.home.id }}" aria-label="{{ t.meta.home_label }}">
+      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="">
+      <span class="logo__text"><small>{{ t.meta.logo_small }}</small><strong>{{ c.short }}</strong></span>
+    </a>
+    <nav class="nav" aria-label="{{ t.meta.menu_label }}">
+      <ul class="nav__links">
+        <li><a href="#{{ t.nav.home.id }}">{{ t.nav.home.label }}</a></li>
+        <li><a href="#{{ t.nav.about.id }}">{{ t.nav.about.label }}</a></li>
+        <li><a href="#{{ t.nav.services.id }}">{{ t.nav.services.label }}</a></li>
+        <li><a href="#{{ t.nav.contact.id }}">{{ t.nav.contact.label }}</a></li>
+      </ul>
+      <div class="lang">
+        {%- if page.lang == "sk" -%}
+        <span>SK</span><a href="{{ t.other_lang.url | relative_url }}" hreflang="en" lang="en">EN</a>
+        {%- else -%}
+        <a href="{{ t.other_lang.url | relative_url }}" hreflang="sk" lang="sk">SK</a><span>EN</span>
+        {%- endif -%}
+      </div>
+    </nav>
+    <a class="btn" href="tel:{{ c.phone_link }}">{{ t.call_btn }}</a>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="{{ t.nav.home.id }}">
+    <div class="container hero__grid">
+      <div class="hero__media">
+        <!-- Fotku dielne vložte ako assets/img/hero.jpg a SVG nižšie nahraďte:
+             <img src="{{ '/assets/img/hero.jpg' | relative_url }}" alt="{{ t.hero.image_alt }}"> -->
+        <svg viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M128 40a32 32 0 0 0-30 43L44 137a14 14 0 0 0 20 20l54-54a32 32 0 0 0 43-30l-19 19-18-5-5-18z"/>
+          <circle cx="54" cy="147" r="3" fill="#fff"/>
+        </svg>
+      </div>
+      <div>
+        <h1>{{ t.hero.title }}</h1>
+        <p class="hero__lead">{{ t.hero.lead }}</p>
+        <p class="hero__text">{{ t.hero.text }}</p>
+        <div class="hero__cta">
+          <a class="btn" href="#{{ t.nav.contact.id }}">{{ t.hero.cta_primary }}</a>
+          <a class="btn btn--ghost" href="#{{ t.nav.services.id }}">{{ t.hero.cta_secondary }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section--soft" aria-label="{{ t.features_label }}">
+    <div class="container features">
+      {%- for f in t.features %}
+      <div class="feature">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% include icon.html name=f.icon %}</svg></div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="{{ t.nav.services.id }}">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{{ t.services.eyebrow }}</span>
+        <h2>{{ t.services.title }}</h2>
+        <p>{{ t.services.text }}</p>
+      </div>
+      <div class="services">
+        {%- for s in t.services.items %}
+        <article class="service">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+          {%- if s.list %}
+          <ul>
+            {%- for li in s.list %}
+            <li>{{ li }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--soft" id="{{ t.nav.about.id }}">
+    <div class="container about">
+      <div>
+        <span class="eyebrow">{{ t.about.eyebrow }}</span>
+        <h2>{{ t.about.title }}</h2>
+        {%- for p in t.about.paragraphs %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+      </div>
+      <div class="stats">
+        {%- for s in t.about.stats %}
+        <div class="stat"><strong>{{ s.value }}</strong><span>{{ s.label }}</span></div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  {%- assign q = c.map_query | url_encode %}
+  <section aria-label="{{ t.map.label }}">
+    <div class="map" data-title="{{ t.map.title }}"
+         data-src="https://maps.google.com/maps?q={{ q }}&amp;z=16&amp;hl={{ t.map.hl }}&amp;output=embed">
+      <div class="map__placeholder">
+        <svg class="map__pin" viewBox="0 0 24 24" fill="#e3201b" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <h3>{{ t.map.heading }}</h3>
+        <button class="btn" type="button" data-load-map>{{ t.map.button }}</button>
+        <p>{{ t.map.note }}
+          <a href="https://www.google.com/maps/search/?api=1&amp;query={{ q }}" target="_blank" rel="noopener">{{ t.map.open }}</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="{{ t.nav.contact.id }}">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{{ t.contact.eyebrow }}</span>
+        <h2>{{ t.contact.title }}</h2>
+        <p>{{ t.contact.text }}</p>
+      </div>
+      <div class="contact">
+        <div>
+          <h3>{{ t.contact.address_h }}</h3>
+          <p><strong>{{ c.name }}</strong><br>{{ c.street }}<br>{{ c.zip_city }}{% if t.contact.country != "" %}<br>{{ t.contact.country }}{% endif %}</p>
+          <p>{{ t.contact.phone }}: <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a></p>
+          <p>{{ t.contact.email }}: <a href="mailto:{{ c.email }}">{{ c.email }}</a></p>
+        </div>
+        <div>
+          <h3>{{ t.contact.hours_h }}</h3>
+          <dl class="hours">
+            {%- for h in t.contact.hours %}
+            <dt>{{ h.days }}</dt><dd>{{ h.time }}</dd>
+            {%- endfor %}
+          </dl>
+        </div>
+        <div class="company">
+          <h3>{{ t.contact.company_h }}</h3>
+          <p><strong>{{ c.name }}</strong></p>
+          <p>{{ t.contact.ico }}: {{ c.ico }}<br>{{ t.contact.dic }}: {{ c.dic }}<br>{{ t.contact.icdph }}: {{ c.icdph }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year">{{ site.time | date: "%Y" }}</span> {{ c.name }}</span>
+    <span><a href="{{ t.other_lang.url | relative_url }}" hreflang="{{ t.other_lang.code }}">{{ t.other_lang.footer }}</a></span>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

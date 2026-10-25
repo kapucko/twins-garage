@@ -1,0 +1,28 @@
+title: Twins garage
+url: ""        # napr. https://www.twinsgarage.sk
+baseurl: ""    # ak web beží v podpriečinku, napr. /autoservis
+
+# Údaje firmy – spoločné pre všetky jazyky
+company:
+  name: Twins garage s. r. o.
+  short: Twins garage
+  street: Bernolákovská 63
+  zip_city: 900 28 Ivanka pri Dunaji
+  ico: "55056229"
+  dic: "2121859223"
+  icdph: SK2121859223
+  phone: +421 900 000 000        # TODO doplniť
+  phone_link: "+421900000000"   # TODO rovnaké číslo bez medzier
+  email: info@example.sk         # TODO doplniť
+  since: 2023
+  map_query: Bernolákovská 63, 900 28 Ivanka pri Dunaji
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,101 @@
+# English texts. Must keep the same structure as sk.yml.
+meta:
+  title: Twins garage – car service in Ivanka pri Dunaji
+  description: Twins garage – car service and tyre service in Ivanka pri Dunaji near Bratislava. Scheduled maintenance, repairs, diagnostics, air conditioning and MOT preparation.
+  logo_small: Car service
+  menu_label: Main menu
+  home_label: Twins garage – home
+
+nav:
+  home: { id: home, label: Home }
+  about: { id: about, label: About }
+  services: { id: services, label: Services }
+  contact: { id: contact, label: Contact }
+
+call_btn: Call us
+other_lang: { code: sk, label: SK, url: /, footer: Slovenská verzia }
+
+hero:
+  title: Your car in good hands
+  lead: Honest, quick and straightforward
+  text: We're a car service in Ivanka pri Dunaji, just outside Bratislava. We handle routine maintenance, repairs and tyre changes – and we tell you up front what needs doing and what it will cost.
+  cta_primary: Book an appointment
+  cta_secondary: Our services
+  image_alt: Our workshop
+
+features_label: Why us
+features:
+  - icon: star
+    title: Quality work
+    text: We use proven parts and fluids, and we stand behind our work.
+  - icon: clock
+    title: Short lead times
+    text: Routine servicing and minor repairs are usually done the same day.
+  - icon: list
+    title: All in one place
+    text: Servicing, tyres and MOT preparation – no need to drive around town.
+  - icon: gift
+    title: Fair prices
+    text: You get the price before we start. No surprises when you pick up your car.
+
+services:
+  eyebrow: Services
+  title: How we can help
+  text: We look after cars and vans of all makes. If you don't see what you need, give us a call – we're happy to advise.
+  items:
+    - title: Car service
+      text: Scheduled maintenance according to the manufacturer's plan and mechanical repairs.
+      list: [oil and filter change, "timing belt, clutch, exhaust", service book stamps]
+    - title: Tyre service
+      text: Seasonal tyre changes, wheel balancing and puncture repair while you wait.
+      list: [tyre change and balancing, puncture repair, tyres to order]
+    - title: Diagnostics
+      text: Warning light on? We'll connect the diagnostics, find the cause and explain the options.
+      list: [computer diagnostics, electrical systems]
+    - title: Brakes and suspension
+      text: Inspection and replacement of brake pads, discs, shock absorbers and joints.
+      list: [brakes and brake fluid, "shocks, control arms, bearings"]
+    - title: Air conditioning
+      text: A/C recharge and disinfection, so you don't spend the summer driving with the windows down.
+      list: [recharge and leak check, cleaning and disinfection]
+    - title: MOT preparation
+      text: Before the technical (STK) and emissions (EK) inspection, we check your car and fix what's needed.
+      list: [pre-inspection check, defect repair]
+
+about:
+  eyebrow: About us
+  title: A small garage with a personal touch
+  paragraphs:
+    - Twins garage has been operating since 2023 in Ivanka pri Dunaji, close to Bratislava. We treat every car as if it were our own – we don't replace what doesn't need replacing, and we show you what we did replace.
+    - Whether your car is new and under warranty or an older family runabout, come by and ask.
+  stats:
+    - { value: "2023", label: workshop opened }
+    - { value: All, label: makes of cars and vans }
+    - { value: 1 day, label: for most routine repairs }
+    - { value: 15 min, label: by car from Bratislava }
+
+map:
+  label: Map
+  title: Twins garage on the map
+  heading: Bernolákovská 63, Ivanka pri Dunaji
+  button: Show map
+  note: The map is loaded from Google Maps, which may set cookies.
+  open: Open in Google Maps
+  hl: en
+
+contact:
+  eyebrow: Contact
+  title: Get in touch
+  text: The quickest way to book is by phone. We speak English.
+  address_h: Address & contact
+  country: Slovakia
+  phone: Phone
+  email: E-mail
+  hours_h: Opening hours
+  hours:
+    - { days: Mon – Fri, time: 8:00 – 17:00 }
+    - { days: Sat – Sun, time: closed }
+  company_h: Company details
+  ico: Company ID (IČO)
+  dic: Tax ID (DIČ)
+  icdph: VAT ID
